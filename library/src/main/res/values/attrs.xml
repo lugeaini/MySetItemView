@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- MySetItemView -->
+    <declare-styleable name="MySetItemView">
+        <attr name="left_txt" format="string" />
+        <attr name="right_txt" format="string" />
+        <attr name="left_image" format="integer" />
+        <attr name="right_image_visible" format="boolean"/>
+        <attr name="checkbox_visible" format="boolean"/>
+    </declare-styleable>
+
+</resources>
