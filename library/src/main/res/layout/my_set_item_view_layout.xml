@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center_vertical"
@@ -12,8 +13,8 @@
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginRight="10dp"
-        android:src="@android:mipmap/sym_def_app_icon"
-        android:layout_weight="0" />
+        android:layout_weight="0"
+        android:src="@android:mipmap/sym_def_app_icon"/>
 
     <TextView
         android:id="@+id/left_txt"
@@ -23,7 +24,7 @@
         android:paddingLeft="1.5dp"
         android:text="left_txt left_txt left_txt left_txt left_txt"
         android:textColor="@android:color/black"
-        android:textSize="16sp" />
+        android:textSize="16sp"/>
 
     <TextView
         android:id="@+id/right_txt"
@@ -36,7 +37,7 @@
         android:maxWidth="120dp"
         android:text="right_txt right_txt right_txt right_txt right_txt"
         android:textColor="@android:color/black"
-        android:textSize="14sp" />
+        android:textSize="14sp"/>
 
     <ImageView
         android:id="@+id/right_image"
@@ -44,14 +45,14 @@
         android:layout_height="15dp"
         android:layout_marginLeft="10dp"
         android:layout_weight="0"
-        android:src="@drawable/icon_arrow_right" />
+        android:src="@drawable/icon_arrow_right"/>
 
     <CheckBox
         android:id="@+id/checkbox"
         android:layout_width="45dp"
         android:layout_height="30dp"
         android:layout_weight="0"
+        android:background="@drawable/icon_checkbox_selector"
         android:button="@null"
-        android:visibility="gone"
-        android:background="@drawable/icon_checkbox_selector"/>
+        android:visibility="gone"/>
 </LinearLayout>

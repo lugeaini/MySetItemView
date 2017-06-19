@@ -3,11 +3,17 @@
 
     <!-- MySetItemView -->
     <declare-styleable name="MySetItemView">
-        <attr name="left_txt" format="string" />
-        <attr name="right_txt" format="string" />
-        <attr name="left_image" format="integer" />
+        <attr name="left_txt" format="string"/>
+        <attr name="right_txt" format="string"/>
+        <attr name="left_image" format="integer"/>
         <attr name="right_image_visible" format="boolean"/>
         <attr name="checkbox_visible" format="boolean"/>
+        <attr name="item_type">
+            <enum name="top" value="1"/>
+            <enum name="middle" value="2"/>
+            <enum name="bottom" value="3"/>
+            <enum name="single" value="0"/>
+        </attr>
     </declare-styleable>
 
 </resources>

@@ -40,6 +40,7 @@ public class MySetItemView extends FrameLayout {
         int leftResId = ta.getResourceId(R.styleable.MySetItemView_left_image, 0);
         boolean rightImageVisible = ta.getBoolean(R.styleable.MySetItemView_right_image_visible, true);
         boolean checkBoxVisible = ta.getBoolean(R.styleable.MySetItemView_checkbox_visible, false);
+        int itemType = ta.getInt(R.styleable.MySetItemView_item_type, ItemType.SINGLE.type);
         ta.recycle();
 
         mLayout = LayoutInflater.from(context).inflate(R.layout.my_set_item_view_layout, null);
@@ -55,6 +56,16 @@ public class MySetItemView extends FrameLayout {
         setRightTxt(rightStr);
         rightImage.setVisibility(rightImageVisible ? VISIBLE : GONE);
         checkBox.setVisibility(checkBoxVisible ? VISIBLE : GONE);
+
+        if (itemType == ItemType.TOP.type) {
+            setBackgroundResource(R.drawable.my_set_item_top_selector);
+        } else if (itemType == ItemType.MIDDLE.type) {
+            setBackgroundResource(R.drawable.my_set_item_middle_selector);
+        } else if (itemType == ItemType.BOTTOM.type) {
+            setBackgroundResource(R.drawable.my_set_item_bottom_selector);
+        } else if (itemType == ItemType.SINGLE.type) {
+            setBackgroundResource(R.drawable.my_set_item_single_selector);
+        }
 
         setClickable(true);
     }
@@ -103,50 +114,35 @@ public class MySetItemView extends FrameLayout {
         }
     }
 
-    /**
-     * 返回左边文字视图
-     *
-     * @return
-     */
     public TextView getLeftTextView() {
         return leftTxt;
     }
 
-    /**
-     * 返回左边图片视图
-     *
-     * @return
-     */
     public ImageView getLeftImage() {
         return leftImage;
     }
 
-    /**
-     * 返回右边文字视图
-     *
-     * @return
-     */
     public TextView getRightTextView() {
         return rightTxt;
     }
 
-    /**
-     * 返回右边图片视图
-     *
-     * @return
-     */
     public ImageView getRightImage() {
         return rightImage;
     }
 
-    /**
-     * 返回CheckBox
-     *
-     * @return
-     */
     public CheckBox getCheckBox() {
         return checkBox;
     }
 
+    public enum ItemType {
+        SINGLE(0), TOP(1), MIDDLE(2), BOTTOM(3);
+
+        int type;
+
+        ItemType(int type) {
+            this.type = type;
+        }
+
+    }
 
 }

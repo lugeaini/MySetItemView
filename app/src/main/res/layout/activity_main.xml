@@ -1,19 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.chenxulu.mysetitemview.MainActivity">
+    android:background="#f6f6f6">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
 
-</android.support.constraint.ConstraintLayout>
+        <com.chenxulu.library.widget.MySetItemView
+            android:id="@+id/item1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:item_type="single"
+            app:left_image="@drawable/icon_set"
+            app:left_txt="single"
+            app:right_txt="content"/>
+
+        <com.chenxulu.library.widget.MySetItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:item_type="top"
+            app:left_image="@drawable/icon_set"
+            app:left_txt="top"
+            app:right_txt="content"/>
+
+
+        <com.chenxulu.library.widget.MySetItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:item_type="bottom"
+            app:left_image="@drawable/icon_set"
+            app:left_txt="bottom bottom"
+            app:right_txt="content content"/>
+
+        <com.chenxulu.library.widget.MySetItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:item_type="middle"
+            app:left_txt="top"
+            app:right_txt="content"/>
+
+        <com.chenxulu.library.widget.MySetItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:item_type="middle"
+            app:left_txt="middle"
+            app:right_txt="content"/>
+
+        <com.chenxulu.library.widget.MySetItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:item_type="bottom"
+            app:left_txt="bottom"
+            app:right_txt="content"/>
+
+        <com.chenxulu.library.widget.MySetItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:item_type="top"
+            app:checkbox_visible="true"
+            app:left_image="@drawable/icon_set"
+            app:left_txt="top"
+            app:right_image_visible="false"/>
+
+        <com.chenxulu.library.widget.MySetItemView
+            android:id="@+id/item8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:item_type="bottom"
+            app:checkbox_visible="true"
+            app:left_image="@drawable/icon_set"
+            app:left_txt="bottom8"
+            app:right_image_visible="false"/>
+
+    </LinearLayout>
+</ScrollView>
